@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Form with Tourist Places</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('bkn6.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.booking-container {
+  background: rgba(255, 255, 255, 0);
+  padding: 60px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  width: 100%;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.booking-header h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #fce6d9;
+  margin-bottom: 10px;
+}
+
+.booking-header p {
+  font-size: 30px;
+  color: #c7c768;
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group {
+  flex: 1;
+  margin-bottom: 15px;
+  padding-right: 10px;
+}
+
+.form-group.full-width {
+  flex-basis: 100%;
+  padding-right: 0;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  font-size: 25px;
+  color: #b7c7e0;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  font-size: 22px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-control:focus {
+  border-color: #86b817;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 30px;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.package-suggestions {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: rgba(240, 240, 240, 0.9);
+  border-radius: 10px;
+  display: none;
+}
+
+.package-suggestions h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.package-suggestions p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Change text color of options in select dropdowns */
+select.form-control option {
+  color: #333; /* Customize this color to your preference */
+  background-color: rgba(255, 255, 255, 0.8); /* Background of options */
+}
+
+/* For starting location specifically */
+#startLocation option {
+  color: #007bff; /* Change this color to your desired text color */
+}
+
+/* For final destination specifically */
+#destination option {
+  color: #28a745; /* Change this color to your desired text color */
+}
+@media (max-width: 768px) {
+  .booking-container {
+    max-width: 100%; /* Make the container fill the screen on small devices */
+    padding: 30px; /* Reduce padding for smaller screens */
+  }
+}
+
+
+</style>
+<body>
+  <div class="wrapper">
+    <div class="booking-container">
+      <div class="booking-header">
+        <h2>Plan Your Dream Getaway</h2>
+        <p>Provide your preferences, and we will find the best packages for you!</p>
+      </div>
+
+      <form id="bookingForm">
+        <!-- Name and Email -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+          </div>
+        </div>
+
+        <!-- Starting and Final Location -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="startLocation">Starting Location</label>
+            <select id="startLocation" class="form-control" required>
+              <option value="" disabled selected>Select Starting Location</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Varanasi">Varanasi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Goa">Goa</option>
+              <option value="Jaipur">Jaipur</option>
+              <option value="Agra">Agra</option>
+              <option value="Agra">Agra</option>
+              <!-- Add more tourist places here -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="destination">Final Destination</label>
+            <select id="destination" class="form-control" required>
+              <option value="" disabled selected>Select Final Destination</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Mumbai">Mumbai</option>
+              <option value="Goa">Goa</option>
+              <option value="Jaipur">Jaipur</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Himachal_Pradesh">Himachal Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Kolkata">Kolkata</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <!-- Add more tourist places here -->
+            </select>
+          </div>
+        </div>
+
+        <!-- Duration of Stay and Hotel Type -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="days">Duration of Stay (Days)</label>
+            <input type="number" id="days" class="form-control" placeholder="How many days?" required>
+          </div>
+
+          <div class="form-group">
+            <label for="hotelType">Hotel Type</label>
+            <select id="hotelType" class="form-control" required>
+              <option value="" disabled selected>Select Hotel Type</option>
+              <option value="economy">Economy</option>
+              <option value="luxury">Luxury</option>
+              <option value="boutique">Boutique</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Total Persons and Budget -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="totalPersons">Total Number of Persons</label>
+            <input type="number" id="totalPersons" class="form-control" placeholder="Number of persons" required>
+          </div>
+
+          <div class="form-group">
+            <label for="budget">Budget (INR)</label>
+            <input type="number" id="budget" class="form-control" placeholder="Enter your budget" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn">Find Packages</button>
+      </form>
+
+      <div id="packageSuggestions" class="package-suggestions"></div>
+    </div>
+  </div>
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Form submission handler
+        const bookingForm = document.getElementById('bookingForm');
+        const packageSuggestions = document.getElementById('packageSuggestions');
+    
+        bookingForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+    
+            // Retrieve user input values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const totalPersons = document.getElementById('totalPersons').value;
+            const startLocation = document.getElementById('startLocation').value;
+            const destination = document.getElementById('destination').value;
+            const stayDuration = document.getElementById('stayDuration').value;
+            const hotelType = document.getElementById('hotelType').value;
+            const budget = document.getElementById('budget').value;
+    
+            // Basic validation
+            if (!name || !email || !totalPersons || !startLocation || !destination || !stayDuration || !hotelType || !budget) {
+                alert("Please fill in all fields");
+                return;
+            }
+    
+            // Suggest packages based on input (dummy logic for now)
+            let suggestedPackage = "Based on your preferences, here are some packages:\n";
+            if (budget < 5000) {
+                suggestedPackage += "1. Budget-friendly package for " + destination + " (Under ₹5000)\n";
+            } else if (budget < 10000) {
+                suggestedPackage += "2. Standard package for " + destination + " (₹5000 - ₹10000)\n";
+            } else {
+                suggestedPackage += "3. Luxury package for " + destination + " (Above ₹10000)\n";
+            }
+    
+            // Display package suggestions
+            packageSuggestions.innerHTML = `<h3>Suggested Packages</h3><p>${suggestedPackage}</p>`;
+            packageSuggestions.style.display = 'block';
+        });
+    
+        // Additional JS for dynamic behavior (e.g., input fields, dropdowns)
+        document.getElementById('stayDuration').addEventListener('change', function () {
+            const duration = this.value;
+            if (duration > 7) {
+                alert("For stays longer than 7 days, special discounts are available.");
+            }
+        });
+    });
+    </script>
+    
+</html>
