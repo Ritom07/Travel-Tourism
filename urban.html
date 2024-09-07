@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Urban Tourist Sites in India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+             .slider {
+          width: 800px;
+          height: 500px;
+          overflow: hidden;
+          border-radius: 10px;
+      }
+
+      .slides {
+          width: 500%;
+          height: 100%;
+          display: flex;
+      }
+
+      .slides input {
+          display: ;
+      }
+
+      .slide {
+          width: 20%;
+          transition: 2s;
+      }
+
+      .slide img {
+          width: 100%;
+          height: 100%;
+      }
+
+      .navigation-manual {
+          position: absolute;
+          width: 800px;
+          margin-top: -40px;
+          display: flex;
+          justify-content: center;
+      }
+
+      .manual-btn {
+          border: 2px solid #40d3dc;
+          padding: 5px;
+          border-radius: 10px;
+          cursor: pointer;
+          transition: 2s;
+      }
+
+      .manual-btn:not(:last-child) {
+          margin-right: 40px;
+      }
+
+      .manual-btn:hover {
+          background: #Red;
+      }
+
+      #radio1:checked ~ .first {
+          margin-left: 0;
+      }
+
+      #radio2:checked ~ .first {
+          margin-left: -25%;
+      }
+
+      #radio3:checked ~ .first {
+          margin-left: -50%;
+      }
+
+      #radio4:checked ~ .first {
+          margin-left: -75%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-gray-800 to-gray-600 p-6 text-center text-white">
+      <h1 class="text-4xl font-bold">Urban Tourist Sites in India</h1>
+      <p class="mt-2 text-xl">Explore the vibrant history and culture of India's iconic cities</p>
+    </header>
+
+    <!-- Main Content -->
+    <section class="container mx-auto py-12">
+      <!-- Delhi -->
+      <div class="slider">
+        <div class="slides">
+          <input type="radio" name="radio-btn" id="radio1" />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+
+          <div class="slide first">
+            <img src="C:\Users\HP\Downloads\pexels-witheline-26893131.jpg" alt="fskovokf" />
+          </div>
+          <div class="slide">
+            <img src="img2.jpg" alt="ofwejofw" />
+          </div>
+          <div class="slide">
+            <img src="img3.jpg" alt="l'fwkkq" />
+          </div>
+          <div class="slide">
+            <img src="img4.jpg" alt="foafa" />
+          </div>
+        </div>
+      </div>
+      <div class="mb-16">
+        <div class="grid items-center gap-8 md:grid-cols-2">
+          <div>
+            <h2 class="text-3xl font-semibold text-gray-800">Delhi</h2>
+            <p class="mt-4 text-gray-700">Delhi, the capital city of India, is a rich tapestry of history and modernity. From the majestic Red Fort to the bustling markets of Chandni Chowk, Delhi offers a blend of ancient and contemporary culture. Its streets tell stories of empires that once ruled the subcontinent.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mumbai -->
+      <div class="mb-16">
+        <div class="grid items-center gap-8 md:grid-cols-2">
+          <!-- Slideshow -->
+
+          <!-- Description -->
+          <div>
+            <h2 class="text-3xl font-semibold text-gray-800">Mumbai</h2>
+            <p class="mt-4 text-gray-700">Mumbai, the financial capital of India, is known for its fast-paced life and iconic landmarks. From the Gateway of India to the bustling streets of Colaba, Mumbai offers a unique blend of colonial history and modern skyscrapers. It’s a city that never sleeps and offers endless experiences.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kolkata -->
+      <div class="mb-16">
+        <div class="grid items-center gap-8 md:grid-cols-2">
+          <!-- Description -->
+          <div>
+            <h2 class="text-3xl font-semibold text-gray-800">Kolkata</h2>
+            <p class="mt-4 text-gray-700">Kolkata, known as the "City of Joy," is a place where the past meets the present. With its colonial architecture, vibrant arts scene, and rich cultural heritage, Kolkata offers a unique glimpse into India's history. Key attractions include the Howrah Bridge, Victoria Memorial, and the bustling New Market.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bangalore -->
+      <div class="mb-16">
+        <div class="grid items-center gap-8 md:grid-cols-2"></div>
+
+        <html></html>
+      </div>
+    </section>
+  </body>
+</html>

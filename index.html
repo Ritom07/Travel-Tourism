@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel & Tourism Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+  <!-- Header -->
+  <header class="bg-gray-800 py-4 text-white">
+    <div class="container mx-auto flex items-center justify-between">
+      <h1 class="text-3xl font-bold" style="margin-left: 20px">Wanderlust Travels</h1>
+      <nav class="flex space-x-9" style="align-items: center; overflow: auto;">
+        <ul class="flex space-x-9" style="display: flex; justify-content: center;">
+          <li><a href="#" class="hover:text-yellow-400">Home</a></li>
+          <li><a href="#destinations" class="hover:text-yellow-400">Destinations</a></li>
+          <li><a href="#services" class="hover:text-yellow-400">Services</a></li>
+          <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+        </ul>
+        <button type="button" id="login_btn"
+          class="mb-2 me-2 rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          style="margin-top: 10px;">
+          <HiUserRemove size={20} />
+          <span className="ml-2">Login</span>
+        </button>
+        <button type="button" id="signup_btn"
+          class="mb-2 me-2 rounded-lg bg-blue-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          style="margin-right: 20px; margin-top: 10px;">
+          <HiUserRemove size={20} />
+          <span className="ml-2">SignUp</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <!-- Hero Section -->
+  <section class="h-screen bg-cover bg-center" style="background-image: url('pexels-andrejcook-131723.jpg'); background-repeat: no-repeat;
+  background-attachment: fixed;">
+    <a class="scrollbtn" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+    <div class="flex h-full items-center justify-center bg-black bg-opacity-50">
+      <div class="text-center text-white">
+        <h2 class="mb-6 text-7xl font-bold">Explore the World with Us</h2>
+        <p class="mb-8 text-xl">Discover new destinations, cultures, and experiences.</p>
+        <a href="#destinations"
+          class="rounded-full bg-yellow-400 px-8 py-4 text-xl font-semibold text-white hover:bg-yellow-500">Start Your
+          Journey</a>
+      </div>
+    </div>
+  </section>
+  <section class="bg-gray-400 py-8">
+    <div class="container mx-auto px-4">
+      <h2 class="mb-4 text-center text-3xl font-bold text-white">Find Your Next Destination</h2>
+      <div class="flex justify-center">
+        <input type="text" placeholder="Search destinations..."
+          class="w-full rounded-l-lg px-4 py-2 focus:outline-none md:w-1/2" />
+        <button class="rounded-r-lg bg-white px-6 py-2 text-blue-600 hover:bg-gray-100">Search</button>
+      </div>
+    </div>
+  </section>
+  <!-- Destinations Section -->
+  <section id="destinations" class="bg-gray-300 py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="mb-12 text-4xl font-bold">Featured Destinations</h2>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3" style="cursor: pointer;">
+        <!-- Destination 1 -->
+        <div class="rounded-lg bg-gray-100 p-5 shadow-lg"  onclick="location.href = 'beach.html';">
+          <img src="pexels-pixabay-163872.jpg" alt="Beach" class="mb-4 h-48 w-full rounded-lg object-cover" />
+          <h3 class="mb-2 text-2xl font-semibold">Tropical Beaches</h3>
+          <p class="text-gray-700">Relax on pristine beaches with crystal clear waters and enjoy the warm sun.</p>
+        </div>
+        <!-- Destination 2 -->
+        <div class="rounded-lg bg-gray-100 p-6 shadow-lg">
+          <img src="pexels-pixabay-355747.jpg" alt="Mountains" class="mb-4 h-48 w-full rounded-lg object-cover" />
+          <h3 class="mb-2 text-2xl font-semibold">Mountain Adventures</h3>
+          <p class="text-gray-700">Explore majestic mountains and embark on thrilling hikes.</p>
+        </div>
+        <!-- Destination 3 -->
+        <div class="rounded-lg bg-gray-100 p-6 shadow-lg">
+          <img src="pexels-navneet-shanu-202773-672630.jpg" alt="City"
+            class="mb-4 h-48 w-full rounded-lg object-cover" />
+          <h3 class="mb-2 text-2xl font-semibold">Urban Escapes</h3>
+          <p class="text-gray-700">Discover the vibrant culture and nightlife of the world's greatest cities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-gray-200 py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="mb-8 text-center text-3xl font-bold text-gray-800">Popular Travel Destination</h2>
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+        <!-- Package 1 -->
+        <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+          <img src="Rishikesh-Uttarakhand-India.jpg" alt="Rishikesh" class="h-48 w-full object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Rishikesh</h3>
+            <p class="mt-2 text-gray-600">Rishikesh, where spirituality meets adventure.</p>
+            <br />
+            <a href="rishikesh.html" class="mt-4 inline-block rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Explore
+              Now</a>
+          </div>
+        </div>
+
+        <!-- Package 2 -->
+        <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+          <img src="Best-Time-to-Vis-Goa-India-scaled.jpg" alt="Goa" class="h-48 w-full object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Goa</h3>
+            <p class="mt-2 text-gray-600">Witness the sunshine with full of greatness.</p>
+            <br />
+            <a href="goa.html" class="mt-4 inline-block rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Explore
+              Now</a>
+          </div>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="overflow-hidden rounded-lg bg-white shadow-lg">
+          <img src="manali-weather-in-winter-best-time-to-visit-manali.jpg" alt="Manali"
+            class="h-48 w-full object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold text-gray-800">Manali</h3>
+            <p class="mt-2 text-gray-600">In the embrace of nature, Manali whispers secrets.</p>
+            <br />
+            <a href="manli.html" class="mt-4 inline-block rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Explore
+              Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Services Section -->
+  <section id="services" class="bg-gray-800 py-16 text-white">
+    <div class="container mx-auto text-center">
+      <h2 class="mb-12 text-4xl font-bold">Our Services</h2>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-3" style="cursor: pointer;">
+        <!-- Service 1 -->
+        <div class="rounded-lg bg-blue-900 p-6">
+          <h3 class="mb-4 text-2xl font-semibold">Custom Travel Plans</h3>
+          <p class="text-gray-300">We tailor travel itineraries to fit your specific needs and interests.</p>
+        </div>
+        <!-- Service 2 -->
+        <div class="rounded-lg bg-blue-900 p-6">
+          <h3 class="mb-4 text-2xl font-semibold">Group Tours</h3>
+          <p class="text-gray-300">Join our group tours and explore new destinations with like-minded travelers.</p>
+        </div>
+        <!-- Service 3 -->
+        <div class="rounded-lg bg-blue-900 p-6">
+          <h3 class="mb-4 text-2xl font-semibold">24/7 Customer Support</h3>
+          <p class="text-gray-300">Our team is available around the clock to assist you during your travels.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Details Section -->
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="mb-12 text-4xl font-bold">Why Choose Us?</h2>
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-2" style="cursor: pointer;">
+        <!-- Detail 1 -->
+        <div class="rounded-lg bg-white p-6 shadow-lg">
+          <h3 class="mb-4 text-2xl font-semibold">Experienced Guides</h3>
+          <p class="text-gray-700">Our travel guides are highly experienced and knowledgeable about the destinations we
+            offer. They ensure that you have a safe and enriching experience.</p>
+        </div>
+        <!-- Detail 2 -->
+        <div class="rounded-lg bg-white p-6 shadow-lg">
+          <h3 class="mb-4 text-2xl font-semibold">Affordable Prices</h3>
+          <p class="text-gray-700">We offer competitive pricing without compromising on quality. Get the best deals for
+            your next vacation.</p>
+        </div>
+        <!-- Detail 3 -->
+        <div class="rounded-lg bg-white p-6 shadow-lg">
+          <h3 class="mb-4 text-2xl font-semibold">Wide Range of Destinations</h3>
+          <p class="text-gray-700">Whether you're looking for a beach getaway, a mountain adventure, or an urban escape,
+            we have something for everyone.</p>
+        </div>
+        <!-- Detail 4 -->
+        <div class="rounded-lg bg-white p-6 shadow-lg">
+          <h3 class="mb-4 text-2xl font-semibold">Personalized Service</h3>
+          <p class="text-gray-700">We take the time to understand your preferences and create a travel experience that
+            is uniquely yours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-blue-800 py-8 text-white">
+    <div class="container mx-auto text-center">
+      <p class="text-lg">Contact Us</p>
+      <p class="mb-4 text-sm" style="cursor: pointer;">Email: support@wanderlusttravels.com | Phone: +123 456 7890</p>
+      <p class="text-xs" style="cursor: pointer;">© 2024 Wanderlust Travels. All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+<script>
+  document.getElementById("login_btn").onclick = function () {
+        location.href = "login.html";
+    };
+  document.getElementById("signup_btn").onclick = function () {
+        location.href = "signup.html";
+    };
+</script>
+</html>

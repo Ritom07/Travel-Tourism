@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Manali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom styles for slideshow */
+      .slideshow-container {
+          position: relative;
+          max-width: 100%;
+          margin: auto;
+          overflow: hidden;
+          border-radius: 10px;
+      }
+
+      .slides {
+          display: none;
+      }
+
+      .fade {
+          animation-name: fade;
+          animation-duration: 2s;
+      }
+
+      @keyframes fade {
+          from {opacity: 0.4}
+          to {opacity: 1}
+      }
+
+      /* Next & previous buttons */
+      .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -22px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+      }
+
+      .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover, .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+      }
+
+      /* Custom animation for text */
+      .text-slide-up {
+          animation: slideUp 1.5s ease-in-out;
+      }
+
+      @keyframes slideUp {
+          from {
+              opacity: 0;
+              transform: translateY(20px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 font-sans">
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-800 to-green-600 p-8 text-center text-white shadow-lg">
+      <h1 class="text-5xl font-extrabold">Discover Rishikesh</h1>
+      <p class="mt-4 text-2xl">Experience the serene beauty and adventure of the Himalayas</p>
+    </header>
+
+    <!-- Main Content -->
+    <section class="container mx-auto py-16">
+      <div class="grid items-center gap-12 md:grid-cols-2">
+        <!-- Slideshow -->
+        <div class="slideshow-container shadow-lg">
+          <div class="slides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="manali-ct-cover.jpg" class="h-auto w-full" alt="Manali Scenery" />
+          </div>
+          <div class="slides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="Paragliding-in-Manali.jpg" class="h-auto w-full" alt="Manali Mountains" />
+          </div>
+          <div class="slides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="Manali-Travel-Guide.jpg" class="h-auto w-full" alt="Manali River" />
+          </div>
+          <!-- Navigation buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <!-- Description -->
+        <div class="text-slide-up">
+          <h2 class="text-4xl font-semibold text-blue-800">Welcome to Rishikesh</h2>
+          <p class="mt-4 text-lg text-gray-700">Rishikesh is a city in India’s northern state of Uttarakhand, in the Himalayan foothills beside the Ganges River. The river is considered holy, and the city is renowned as a center for studying yoga and meditation. Temples and ashrams (centers for spiritual studies) line the eastern bank around Swarg Ashram, a traffic-free, alcohol-free and vegetarian enclave upstream from Rishikesh town.</p>
+          <ul class="mt-6 space-y-3 text-lg text-green-700">
+            <li>✅ Scenic Trekking Trails</li>
+            <li>✅ Exciting River Rafting</li>
+            <li>✅ Vibrant Local Culture</li>
+            <li>✅ Picturesque Landscapes</li>
+          </ul>
+          <a href="#" class="mt-4 inline-block rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 p-6 text-center text-white">
+      <p>&copy; 2024 Discover Manali. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Slideshow -->
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("slides");
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+          setTimeout(showSlides, 4000); // Change image every 4 seconds
+      }
+
+      function plusSlides(n) {
+          slideIndex += n - 1;
+          showSlides();
+      }
+    </script>
+  </body>
+</html>
